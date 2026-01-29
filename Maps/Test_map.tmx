@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="64" tileheight="64" infinite="0" nextlayerid="22" nextobjectid="9">
+ <tileset firstgid="1" source="../../../../Tiles/spritesheet-tiles-default.tsx"/>
+ <tileset firstgid="325" name="heard" tilewidth="64" tileheight="64" tilecount="1" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="3">
+   <image source="../../../../Desktop/hud_heart.png" width="64" height="64"/>
+  </tile>
+ </tileset>
+ <layer id="20" name="background" width="30" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20JT6AAAHgaCWAAAQ==
+  </data>
+ </layer>
+ <layer id="19" name="walls" width="30" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMAqGL5Cns10wTAisB+J1aHgDmhn4MDb9+PBqAphYQMicUQzBAJQtRLk=
+  </data>
+ </layer>
+ <layer id="21" name="decor" width="30" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMAoYGEwYB9oFwx9UD7QDRgHdAAClYgCx
+  </data>
+ </layer>
+ <layer id="18" name="lever" width="30" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGAb1A7kA7YBTQBQAA2SgAbg==
+  </data>
+ </layer>
+ <layer id="17" name="exit" width="30" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGJtAeIHu1BsjeUUA/AAC+PABW
+  </data>
+ </layer>
+ <layer id="16" name="extra_lives" width="30" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4A6wINxoF1AezDc/YjNf4PFz6S4jdZupmeYgOwaLHFALTCQ/iHGbmqH+XCMw1FAGAAABxIEkQ==
+  </data>
+ </layer>
+ <layer id="15" name="coins" width="30" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFQw2o4mCPAtLAYAk7UtxBjpsHiz9pCQj5caiFAT73UuJXVSLUUAuQawc943KopYtRMLQAABfxAnY=
+  </data>
+ </layer>
+ <layer id="14" name="ladders" width="30" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2BogfIBsrdiBNurNMzsTR+1d9TeYWTvKBicAADx2wii
+  </data>
+ </layer>
+ <layer id="13" name="hazard" width="30" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMNRBJQH+KKAPqEfD5IAsIjG1QSaReBQQBwCWoQst
+  </data>
+ </layer>
+ <objectgroup id="12" name="platforms">
+  <object id="6" gid="167" x="256" y="896" width="323.273" height="64">
+   <properties>
+    <property name="boundary_left" type="float" value="256"/>
+    <property name="boundary_right" type="float" value="1152"/>
+    <property name="change_x" type="float" value="3"/>
+   </properties>
+  </object>
+  <object id="7" gid="30" x="1216" y="388" width="128" height="64">
+   <properties>
+    <property name="boundary_left" type="float" value="1216"/>
+    <property name="boundary_right" type="float" value="1856"/>
+    <property name="change_x" type="float" value="3"/>
+   </properties>
+  </object>
+  <object id="8" gid="30" x="1026" y="706" width="64" height="64">
+   <properties>
+    <property name="boundary_bottom" type="float" value="388"/>
+    <property name="boundary_top" type="float" value="706"/>
+    <property name="change_y" type="float" value="4"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
