@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="60" height="20" tilewidth="64" tileheight="64" infinite="0" nextlayerid="22" nextobjectid="10">
+ <tileset firstgid="1" source="../../../../Tiles/spritesheet-tiles-default.tsx"/>
+ <tileset firstgid="325" name="heard" tilewidth="64" tileheight="64" tilecount="1" columns="0">
+  <grid orientation="orthogonal" width="1" height="1"/>
+  <tile id="3">
+   <image source="../../../../Desktop/hud_heart.png" width="64" height="64"/>
+  </tile>
+ </tileset>
+ <layer id="20" name="background" width="60" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztz0ERADAIwDDwgX+ds7AXcEeioI2AvSqnC3pd+wUAAIAfD577ADs=
+  </data>
+ </layer>
+ <layer id="19" name="walls" width="60" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzll1EOQDAMhjmHeRAEJ3cE3E77tixFx2Zb+yV9sAfZ51+bqSo9NHXqHfyLj+8OtUEdsTbzAfTgliZaAb7Gw0GK7wS1MFxC+GJfp+xpKt/uYk1Kvlwk+D5hZ63B16Z037nO5zzHmGMrscb1decV9a4SyCXfv5Dky+mJJ99c5jPl8qanQuWb+t50h/1dDPMuieR+njm4+fbwPECNhJtE3zvQF//htRT6ngmPPMg=
+  </data>
+ </layer>
+ <layer id="15" name="coins" width="60" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztl0sKwCAMRL1M7n/Fbout1bEZ8jEPBBeSZPJBbQ1DwPNsBFgrtrzT6/mjt4gBWsssvX5nFO+Ojmjai3PI2ptZdVnh4Y7/8m8RW+9TKwbrPK8y6wkZ7AsfaNaEUWvWfKEw3sM7aNitOXzylhPNmjNynvHPFYELlpMIPg==
+  </data>
+ </layer>
+ <layer id="16" name="extra_lives" width="60" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzt07ENACAIAEHczv0nsrUwsTFR4W4CCE8EK73dnoBT3JLq/ACvqtBmhR3JQ6/Mdj3oJQ+35BcDIBMCkg==
+  </data>
+ </layer>
+ <layer id="21" name="decor" width="60" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzt1cEJACAQA8FYh1ZiNRZh/1iCfkTMZuD+Hgun9LdWpHo4Dmj7kkxpvH5D3JO+3oh9G+yf6bB9wxfxXpGkr7f09Za+ewvL7QiP
+  </data>
+ </layer>
+ <layer id="18" name="lever" width="60" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztziEBAAAIwLAXpr8lARqzJVhxme8AAAAAAC2V/QBu
+  </data>
+ </layer>
+ <layer id="17" name="exit" width="60" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztzkEBAAAEBDB56N9PC+6xJVgVkGS+A8f6OwAAAEC8BfU4AFY=
+  </data>
+ </layer>
+ <layer id="14" name="ladders" width="60" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20ND6AAAAAA4NcAEsAAAQ==
+  </data>
+ </layer>
+ <layer id="13" name="hazard" width="60" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztzrEJAAAIAzA/93UvEBGcJIEuUooRAAAAAL/lMpvd6dZtdr2r3z4pUwYNZg==
+  </data>
+ </layer>
+ <objectgroup id="12" name="platforms">
+  <object id="9" gid="177" x="260" y="712" width="128" height="64">
+   <properties>
+    <property name="boundary_bottom" type="float" value="712"/>
+    <property name="boundary_left" type="float" value="260"/>
+    <property name="boundary_right" type="float" value="465"/>
+    <property name="boundary_top" type="float" value="1160"/>
+    <property name="change_x" type="float" value="4"/>
+    <property name="change_y" type="float" value="6"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
