@@ -1,0 +1,78 @@
+import sys
+import io
+from io import BytesIO  # Этот класс поможет нам сделать картинку из потока байт
+
+from PyQt6.QtGui import QPixmap
+from PyQt6.QtWidgets import QApplication, QLabel, QMainWindow, QPushButton, QLineEdit
+from PyQt6 import uic  # Импортируем uic
+
+import requests
+from PIL import Image
+
+
+# Пусть наше приложение предполагает запуск:
+# python search.py Москва, ул. Ак. Королева, 12
+# Тогда запрос к геокодеру формируется следующим образом:
+SESSION = requests.session()
+
+
+class Map_deckstop(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setGeometry(300, 50, 700, 700)
+        self.search_button = QPushButton('Поиск', self)
+        self.search_button.setGeometry(300, 630, 100, 30)
+        self.latitude = QLineEdit(self)
+        self.latitude.setGeometry(10, 590, 100, 20)
+        QLabel('Широта', self).setGeometry(10, 570, 100, 20)
+        self.longitude = QLineEdit(self)
+        self.longitude.setGeometry(200, 590, 100, 20)
+        QLabel('Долгота', self).setGeometry(200, 570, 100, 20)
+        self.scale = QLineEdit(self)
+        self.scale.setGeometry(500, 590, 100, 20)
+        QLabel('Размер', self).setGeometry(500, 570, 100, 20)
+        self.map_label = QLabel(self)
+        self.map_label.setGeometry(5, 5, 500, 500)
+        self.search_button.clicked.connect(self.run)
+
+    def run(self):
+
+        coords = [self.latitude.text(), self.longitude.text()]
+
+        # geocoder_api_server = "http://geocode-maps.yandex.ru/1.x/"
+
+        delta = self.scale.text()
+        apikey = "f3a0fe3a-b07e-4840-a1da-06f18b2ddf13"
+
+        # Собираем параметры для запроса к StaticMapsAPI:
+        map_params = {
+            "ll": ",".join(coords),
+            "spn": ",".join([delta, delta]),
+            "apikey": apikey,
+
+        }
+
+        map_api_server = "https://static-maps.yandex.ru/v1"
+        # ... и выполняем запрос
+        response = requests.get(map_api_server, params=map_params)
+        im = BytesIO(response.content)
+        print(im)
+        Image.open(im).show()
+        print(0)
+        self.pixmap = QPixmap(Image.open(im))
+        print(1)
+        # Если картинки нет, то QPixmap будет пустым,
+        # а исключения не будет
+        # Отображаем содержимое QPixmap в объекте QLabel
+        self.map_label.setPixmap(self.pixmap)
+        print(2)
+
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    ex = Map_deckstop()
+    ex.show()
+    sys.exit(app.exec())
+
+
+SESSION.close()
